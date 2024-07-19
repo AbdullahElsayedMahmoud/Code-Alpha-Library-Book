@@ -1,0 +1,620 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --primary-color: #d4af37; 
+    --secondary-color: #b8860b; 
+    --accent-color: #f4a261; 
+    --background-color: #000; 
+    --text-color: #000; 
+    --light-color: #fff; 
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    background-image: url(image/bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+section nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 10px var(--primary-color);
+    background: var(--background-color);
+    position: fixed;
+    left: 0;
+    z-index: 100;
+}
+
+section nav .logo img {
+    width: 100px;
+    cursor: pointer;
+    margin: 8px 0;
+}
+
+section nav ul {
+    list-style: none;
+}
+
+section nav li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+section nav li a {
+    text-decoration: none;
+    color: var(--light-color);
+}
+
+section nav li a:hover {
+    color: var(--primary-color);
+}
+
+section nav .social_icon i {
+    margin: 0 5px;
+    font-size: 18px;
+}
+
+section nav .social_icon i:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+section .main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 10%;
+}
+
+section .main h1 {
+    position: relative;
+    font-size: 55px;
+    top: 80px;
+    left: 25px;
+    color: var(--text-color); /* نصوص باللون الأسود */
+}
+
+section .main h1 span {
+    color: var(--primary-color); /* نصوص "BOOK STORE" باللون الذهبي */
+}
+
+section .main p {
+    width: 650px;
+    text-align: justify;
+    line-height: 22px;
+    position: relative;
+    top: 125px;
+    left: 25px;
+    color: var(--light-color);
+}
+
+section .main .main_tag .main_btn {
+    background: var(--primary-color);
+    padding: 10px 20px;
+    position: relative;
+    top: 200px;
+    left: 25px;
+    color: var(--background-color);
+    text-decoration: none;
+}
+
+section .main .main_img img {
+    width: 780px;
+    position: relative;
+    top: 90px;
+    left: 20px;
+}
+
+.services {
+    width: 100%;
+    height: auto;
+    margin: 35px 0;
+    background: var(--background-color);
+}
+
+.services .services_box {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.services .services_box .services_card {
+    text-align: center;
+    width: 310px;
+    height: auto;
+    box-shadow: 0 0 8px var(--primary-color);
+    padding: 15px 10px;
+    background: var(--light-color);
+}
+
+.services .services_box .services_card i {
+    color: var(--primary-color);
+    font-size: 45px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.services .services_box .services_card h3 {
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+section p {
+    font-size: 18px; /* حجم النص */
+    color: var(--light-color); /* لون النص */
+    text-align: center; /* محاذاة النص في المنتصف */
+    margin-top: 20px; /* المسافة من الأعلى */
+}
+
+section p a {
+    color: var(--primary-color); /* لون الرابط */
+    text-decoration: none; /* إزالة التسطير من الرابط */
+}
+
+section p a:hover {
+    text-decoration: underline; /* إضافة التسطير عند التمرير */
+    color: var(--accent-color); /* تغيير لون الرابط عند التمرير */
+}
+
+
+.about {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--background-color);
+}
+
+.about .about_image img {
+    width: 800px;
+}
+
+.about .about_tag h1 {
+    font-size: 50px;
+    position: relative;
+    bottom: 35px;
+    color: var(--light-color);
+}
+
+.about .about_tag p {
+    line-height: 22px;
+    width: 650px;
+    text-align: justify;
+    margin-bottom: 15px;
+    color: var(--light-color);
+}
+
+.about .about_tag .about_btn {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: var(--background-color);
+    text-decoration: none;
+    position: relative;
+    top: 50px;
+}
+
+.featured_boks {
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+    background: var(--background-color);
+}
+
+.featured_boks h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 45px;
+    color: var(--light-color);
+}
+
+.featured_boks .featured_book_box {
+    width: 95%;
+    height: 60vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.featured_boks .featured_book_box .featured_book_card {
+    width: 250px;
+    height: 420px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid var(--secondary-color);
+    margin: auto 20px;
+    background: var(--light-color);
+}
+
+.featured_boks .featured_book_box .featured_book_card:hover {
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+.featured_boks .featured_book_box .featured_book_card .featurde_book_img img {
+    width: 150px;
+}
+
+.featured_boks .featured_book_box .featured_book_card .featurde_book_tag h2 {
+    margin: 12px;
+    color: var(--text-color);
+}
+
+.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .writer {
+    color: var(--secondary-color);
+}
+
+.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .categories {
+    color: var(--primary-color);
+    margin-top: 8px;
+}
+
+.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .book_price {
+    margin-top: 8px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .book_price sub {
+    font-weight: 100;
+    padding: 0 5px;
+    color: var(--secondary-color);
+}
+
+.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .f_btn {
+    padding: 8px 20px;
+    border: 2px solid var(--primary-color);
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+.arrivals {
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 35px;
+    background: var(--background-color);
+}
+
+.arrivals h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 35px;
+    color: var(--light-color);
+}
+
+.arrivals .arrivals_box {
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 25px 0;
+}
+
+.arrivals .arrivals_box .arrivals_card {
+    width: 250px;
+    height: 340px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid var(--secondary-color);
+    margin: auto 20px;
+    background: var(--light-color);
+}
+
+.arrivals .arrivals_box .arrivals_card:hover {
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+.arrivals .arrivals_box .arrivals_card .arrivals_image {
+    width: 150px;
+    height: 220px;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+.arrivals .arrivals_box .arrivals_card .arrivals_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+}
+
+.arrivals .arrivals_box .arrivals_card:hover .arrivals_image img {
+    transform: scale(1.1);
+}
+
+.arrivals .arrivals_box .arrivals_card .arrivals_tag h3 {
+    font-weight: bold;
+    margin: 8px 0;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.arrivals .arrivals_box .arrivals_card .arrivals_tag p {
+    font-weight: 300;
+    font-size: 20px;
+    margin: 8px 0;
+    color: var(--text-color);
+}
+
+.arrivals .arrivals_box .arrivals_card .arrivals_tag .arrivals_icon {
+    color: var(--primary-color);
+    margin-bottom: 18px;
+}
+
+.arrivals .arrivals_box .arrivals_card .arrivals_tag .arrivals_btn {
+    padding: 8px 20px;
+    border: 2px solid var(--primary-color);
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.reviews {
+    width: 100%;
+    height: auto;
+    background: var(--background-color);
+}
+
+.reviews h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 55px;
+    color: var(--light-color);
+}
+
+.reviews .review_box {
+    width: 95%;
+    height: 50vh;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviews .review_box .review_card {
+    width: 400px;
+    height: 320px;
+    box-shadow: 0 0 8px var(--primary-color);
+    padding: 15px;
+    margin: 0 12px;
+    background: var(--light-color);
+}
+
+.reviews .review_box .review_card i {
+    float: right;
+    font-size: 120px;
+    position: relative;
+    bottom: 20px;
+    color: #eaeaea;
+}
+
+.reviews .review_box .review_card .card_top img {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.reviews .review_box .review_card .card p {
+    margin: 10px 0 10px 0;
+    text-align: justify;
+    line-height: 22px;
+    color: var(--text-color);
+}
+
+.reviews .review_box .review_card .card .review_icon i {
+    font-size: 16px;
+    float: left;
+    margin-top: 20px;
+    color: var(--primary-color);
+    padding: 0 1px;
+}
+
+.banner {
+    width: 100%;
+    height: 50vh;
+    background-image: url(image/banner.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.banner .banner_btn {
+    padding: 8px 20px;
+    background: var(--primary-color);
+    text-decoration: none;
+    color: var(--background-color);
+    position: relative;
+    top: 70%;
+    left: 7%;
+}
+
+.blog {
+    width: 100%;
+    height: auto;
+    margin: 25px 0;
+    background: var(--background-color);
+}
+
+.blog h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: var(--light-color);
+}
+
+.blog .blog_box {
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-gap: 25px;
+}
+
+.blog .blog_box .blog_card {
+    margin: 0 auto;
+    width: 450px;
+    height: auto;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    background: var(--light-color);
+}
+
+.blog .blog_box .blog_card .blog_img {
+    width: 450px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.blog .blog_box .blog_card .blog_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.blog .blog_box .blog_card .blog_tag {
+    padding: 20px;
+}
+
+.blog .blog_box .blog_card .blog_tag h2 {
+    color: var(--primary-color);
+}
+
+.blog .blog_box .blog_card .blog_tag p {
+    margin-top: 10px;
+    text-align: justify;
+    line-height: 22px;
+    color: var(--text-color);
+}
+
+.blog .blog_box .blog_card .blog_tag .blog_icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* الفوتر */
+footer {
+    width: 100%;
+    background: #000; /* خلفية سوداء */
+    color: #fff; /* نصوص بيضاء */
+    padding: 30px 0;
+}
+
+footer .footer_main {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+footer .footer_main .tag {
+    width: 23%;
+}
+
+footer .footer_main .tag img {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+footer .footer_main .tag h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #ffd700; /* اللون الذهبي للعناوين */
+}
+
+footer .footer_main .tag p {
+    line-height: 22px;
+    margin-bottom: 15px;
+    color: #fff; /* نصوص بيضاء */
+}
+
+footer .footer_main .tag a {
+    display: block;
+    color: #fff; /* الروابط البيضاء */
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+footer .footer_main .tag a:hover {
+    color: #ffd700; /* الروابط الذهبية عند التمرير */
+}
+
+footer .footer_main .tag .social_link i {
+    font-size: 18px;
+    margin: 0 10px;
+    color: #ffd700; /* الأيقونات الذهبية */
+    cursor: pointer;
+}
+
+footer .footer_main .tag .search_bar {
+    width: 100%;
+    max-width: 230px;
+    height: 35px;
+    background: #fff; /* خلفية شريط البحث البيضاء */
+    border-radius: 25px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+footer .footer_main .tag .search_bar input {
+    width: 80%;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #000; /* نصوص داخل شريط البحث باللون الأسود */
+    background: none;
+}
+
+footer .footer_main .tag .search_bar button {
+    width: 20%;
+    background: #ffd700; /* خلفية الزر الذهبية */
+    border: none;
+    border-radius: 25px;
+    color: #000; /* نص الزر باللون الأسود */
+    cursor: pointer;
+}
+
+footer .end {
+    text-align: center;
+    padding: 10px;
+    background: #000; /* خلفية سوداء للفوتر السفلي */
+    color: #fff; /* نصوص بيضاء */
+}
+
+footer .end span {
+    color: #ffd700; /* نصوص مميزة باللون الذهبي */
+}
